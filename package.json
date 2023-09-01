@@ -4,7 +4,7 @@
   "private": true,
   "description": "",
   "scripts": {
-    "build": "tsc && cp static/toolrunner.js node_modules/@actions/exec/lib/toolrunner.js --force",
+    "build": "tsc && cp static/toolrunner.js node_modules/@actions/exec/lib/toolrunner.js",
     "format": "prettier --write '**/*.ts'",
     "format-check": "prettier --check '**/*.ts'",
     "lint": "eslint src/**/*.ts",
@@ -19,8 +19,7 @@
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/exec": "^1.1.1",
-    "@actions/http-client": "^2.0.1",
-    "node": "^20.5.1"
+    "@actions/http-client": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.0",
