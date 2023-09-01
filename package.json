@@ -4,7 +4,7 @@
   "private": true,
   "description": "",
   "scripts": {
-    "build": "tsc && cp static/toolrunner.js node_modules/@actions/exec/lib/toolrunner.js",
+    "build": "tsc && cp static/toolrunner.js node_modules/@actions/exec/lib/toolrunner.js --force",
     "format": "prettier --write '**/*.ts'",
     "format-check": "prettier --check '**/*.ts'",
     "lint": "eslint src/**/*.ts",
