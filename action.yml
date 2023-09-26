@@ -6,10 +6,10 @@ inputs:
     default: '${{ github.token }}'
     required: true
   khulnasoft-key:
-    description: 'KhulnaSoft key'
+    description: 'Khulnasoft key'
     required: true
   khulnasoft-secret:
-    description: 'KhulnaSoft secret'
+    description: 'Khulnasoft secret'
     required: true
   repo-path:
     description: 'Path to the repository'

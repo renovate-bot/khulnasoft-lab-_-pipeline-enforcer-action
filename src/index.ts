@@ -13,7 +13,7 @@ const INSTALLATION_SCRIPT_PATH = 'install.sh'
 const INTEGRITY_CLI_DOWNLOAD_URL =
   'https://download.codesec.khulnasoft.com/pipeline-enforcer/install.sh'
 const INTEGRITY_INSTALLATION_SCRIPT_CHECKSUM_URL =
-  'https://github.com/khulnasoft-labs/integrity-releases/releases/latest/download/install.sh.checksum'
+  'https://github.com/argonsecurity/integrity-releases/releases/latest/download/install.sh.checksum'
 
 const httpClient = new http.HttpClient('pipeline-enforcer-action')
 
@@ -114,8 +114,8 @@ const executePipelineEnforcerInBackground = async (
   await exec(command, ['-c', pipelineEnforcerCommand], {
     env: {
       ...process.env,
-      AQUA_KEY: khulnasoftKey,
-      AQUA_SECRET: khulnasoftSecret,
+      KHULNASOFT_KEY: khulnasoftKey,
+      KHULNASOFT_SECRET: khulnasoftSecret,
       ACCESS_TOKEN: accessToken
     },
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -27,8 +27,8 @@ const executePipelineEnforcerEnd = async (flags: PipelineEnforcerEndFlags) => {
     ignoreReturnCode: true,
     env: {
       ...process.env,
-      AQUA_KEY: khulnasoftKey,
-      AQUA_SECRET: khulnasoftSecret
+      KHULNASOFT_KEY: khulnasoftKey,
+      KHULNASOFT_SECRET: khulnasoftSecret
     }
   })
 
@@ -49,7 +49,7 @@ async function run(): Promise<void> {
     if (error instanceof CommandError) {
       if (error.exitCode == 13) {
         core.setFailed(
-          'KhulnaSoft Security Pipeline Enforcer - assurance policies failed'
+          'Khulnasoft Security Pipeline Enforcer - assurance policies failed'
         )
       } else {
         core.setFailed(error.message)
